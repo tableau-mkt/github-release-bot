@@ -1,23 +1,19 @@
 # github-release-bot
 
-> A GitHub App built with [Probot](https://github.com/probot/probot) that generates Github releases in draft upon pull request merge. To be used / deployed on Github Actions.
+> A GitHub App built with [Probot](https://github.com/probot/probot) that generates Github releases in draft upon pull request merge. Deployed on Heroku: https://dashboard.heroku.com/apps/evening-sierra-59086
 
-## Setup
+## Heroku
+Find instructions for deployment to Heroku here: https://probot.github.io/docs/deployment/#heroku
 
-```sh
-# Install dependencies
-npm install
+## Enabling the bot on a repository
 
-# Run the bot
-npm start
-```
-
-## Contributing
-
-If you have suggestions for how release-notes-bot could be improved, or want to report a bug, open an issue! We'd love all and any contributions.
-
-For more, check out the [Contributing Guide](CONTRIBUTING.md).
-
-## License
-
-¯\_(ツ)_/¯
+1. Go to [tableau-mkt-release-notes-bot settings](https://github.com/organizations/tableau-mkt/settings/installations/1171165).
+  - Add the repository you wish to enable the app on under Repository Access, then save.
+2. Then go to settings page of the repository you want to enable the app on. 
+  - Click on webhook in the lefthand list on the repository settings page.
+  - Then click on add webhook, and enter the following values in the fields. 
+    - Payload URL: https://evening-sierra-59086.herokuapp.com/  
+    - Content type: application/x-www-form-urlencoded
+    - Secret: find this in KeePass under Misc Web Tools, Github tableau mkt release notes (bot)
+    - Which events would you like to trigger this webhook? Select `Pull Requests` under 'Let me select individual events'.
+    - Enable checkbox 'Active'.
