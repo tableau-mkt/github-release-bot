@@ -12,8 +12,8 @@ Find instructions for deployment to Heroku here: https://probot.github.io/docs/d
 2. Then go to settings page of the repository you want to enable the app on. 
   - Click on webhook in the lefthand list on the repository settings page.
   - Then click on add webhook, and enter the following values in the fields. 
-    - Payload URL: https://evening-sierra-59086.herokuapp.com/  
-    - Content type: application/x-www-form-urlencoded
+    - Payload URL: https://github-release-drafter.herokuapp.com/
+    - Content type: application/json
     - Secret: find this in KeePass under Misc Web Tools, Github tableau mkt release notes (bot)
     - Which events would you like to trigger this webhook? Select `Pull Requests` under 'Let me select individual events'.
     - Enable checkbox 'Active'.
