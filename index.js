@@ -13,7 +13,7 @@ module.exports = app => {
     if (context.payload.pull_request.base.ref !== 'master') return
 
     // Renew token.
-    context.github = await app.auth(context.payload.installation.id);
+    context.github = await app.auth(33384);
 
     const release = await releaseBuilder(context);
 
