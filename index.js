@@ -1,4 +1,4 @@
-const releaseBuilder = require('./github-release-body-builder');
+const releaseBuilder = require('./lib/github-release-body-builder');
 
 /**
  * This is the main entrypoint to your Probot app
